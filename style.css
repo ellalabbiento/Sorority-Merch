@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorority Merch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    
+    <style>
+        /* General Styles */
+        body {
+            background-color: #ffe4f1; /* Light pink background */
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun, casual font */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #d5006d; /* Bright pink header background */
+            color: #ffffff; /* White text color */
+            padding: 20px; /* Padding for header */
+            text-align: center; /* Center the text */
+            border-bottom: 5px solid #ff69b4; /* Bright pink border */
+        }
+
+        /* Navigation Styles */
+        nav {
+            margin: 10px 0; /* Margin around navigation */
+        }
+
+        nav a {
+            color: #ffffff; /* Link color */
+            margin: 0 15px; /* Margin between links */
+            text-decoration: none; /* Remove underline */
+            font-weight: bold; /* Bold text */
+        }
+
+        nav a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #ff69b4; /* Bright pink on hover */
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px; /* Padding for main content */
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center; /* Center footer text */
+            padding: 10px; /* Padding for footer */
+            background-color: #d5006d; /* Bright pink footer background */
+            color: #ffffff; /* Footer text color */
+        }
+
+        /* jQuery Page Specific Styles */
+        section {
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the jQuery interactive sections */
+        section#hideSection {
+            background-color: #ffe4f1; /* Light pink background */
+        }
+
+        section#toggleSection {
+            background-color: #f1a1e8; /* Light pink with a shade of purple */
+        }
+
+        section#colorSection {
+            background-color: #ffb3c6; /* Lighter pink to match the theme */
+        }
+
+        /* Button Styling for jQuery interactions */
+        button {
+            background-color: #d5006d; /* Bright pink */
+            color: #ffffff; /* White text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff69b4; /* Bright pink hover color */
+        }
+
+        /* Paragraph Styling for Interactive Effects */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 10px 0;
+            color: #4d4d4d;
+        }
+
+        /* Hover effects for interactive paragraphs */
+        p:hover {
+            color: #ff69b4; /* Hover color for paragraphs */
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("#p1").mouseenter(function(){
+                alert("Welcome to Sorority Merch!");
+            });
+
+            $("p").click(function(){
+                $(this).hide();
+            });
+
+            $("button").click(function(){
+                $("p").toggle();
+            });
+
+            $("button").click(function(){
+                $("#p1").css("color", "pink").slideUp(2000).slideDown(2000);
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Sorority Merch!</h1>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="recipes.html">Recipe Cards</a>
+        <a href="celebrity.html">Celebrity Favorites</a>
+        <a href="materialize.html">Materialize</a>
+        <a href="jquery.html">JQuery</a>
+    </div>
+</header>
+
+<main>
+    <!-- jQuery Interactive Content -->
+
+    <section id="hideSection">
+        <p>If you click on me, I will disappear.</p>
+        <p>Click me away!</p>
+    </section>
+
+    <hr>
+
+    <section id="toggleSection">
+        <button>Toggle between hiding and showing the paragraphs</button>
+        <p>This is a paragraph about the latest sorority merch collection.</p>
+        <p>Check out our new t-shirt designs!</p>
+    </section>
+
+    <hr>
+
+    <section id="colorSection">
+        <p id="p1">Exclusive Giveaway! Enter Now!</p>
+        <button>Click me to enter</button>
+    </section>
+</main>
+
+<footer>
+    <p><b>Sorority Merch Store</b> | <a href="https://miamioh.edu/index.html" target="_blank">Miami University</a></p>
+</footer>
+
+</body>
+</html>
